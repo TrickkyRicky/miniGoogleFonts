@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { data } from "./data";
 import { IFontData } from "./types";
+import { FBox, Grid } from "./styles";
+import Nav from "./components/Nav";
+import Header from "./components/Header";
+import Card from "./components/Card";
 
 const URL = "https://www.googleapis.com/webfonts/v1/webfonts?key=";
 const App = () => {
@@ -14,7 +18,17 @@ const App = () => {
     getData();
   }, []);
   console.log("THE FONTS::: ", fonts);
-  return <div></div>;
+  return (
+    <FBox fd="column">
+      <Nav />
+      <Header />
+      <Grid>
+        {fonts?.items.map((item) => (
+          <Card />
+        ))}
+      </Grid>
+    </FBox>
+  );
 };
 
 export default App;

@@ -37,7 +37,7 @@ const CreateGlobal = createGlobalStyle`
   body {
     width: 100%;
     height: 300vh;
-    background-color: darkblue;
+    background-color: #1A2238;
   }
 
 `;
