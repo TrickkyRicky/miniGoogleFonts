@@ -29,7 +29,7 @@ const Header: FC<IHeader> = ({
       <Slider
         size="small"
         value={fontSize}
-        onChange={(e) => setFontSize(e.target.value)}
+        onChange={(e: any) => setFontSize(e.target.value)}
         step={1}
         max={50}
         aria-label="Small"
